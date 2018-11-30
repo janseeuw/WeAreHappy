@@ -1,0 +1,43 @@
+@import '../_variables';
+
+.vote {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+
+    &__options {
+        flex-grow: 1;
+    }
+
+    &__option {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 72px;
+        font-weight: 700;
+        color: $white;
+
+        &--positive {
+            background: $green;
+            &:hover {
+                background: lighten($green, 10%);
+            }
+        }
+        &--neutral {
+            background: $orange;
+            &:hover {
+                background: lighten($orange, 10%);
+            }
+
+        }
+        &--negative {
+            background: $red;
+            &:hover {
+                background: lighten($red, 10%);
+            }
+        }
+    }
+}
